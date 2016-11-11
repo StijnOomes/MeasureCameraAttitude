@@ -39,6 +39,7 @@
 			isa = PBXGroup;
 			children = (
 				045DCA591DCA3EB2000E739B /* MeasureCameraAttitude */,
+				045DCA6C1DCA3EE7000E739B /* Other files */,
 				045DCA581DCA3EB2000E739B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,13 +55,21 @@
 		045DCA591DCA3EB2000E739B /* MeasureCameraAttitude */ = {
 			isa = PBXGroup;
 			children = (
-				045DCA5A1DCA3EB2000E739B /* AppDelegate.swift */,
 				045DCA5C1DCA3EB2000E739B /* ViewController.swift */,
 				045DCA5E1DCA3EB2000E739B /* Main.storyboard */,
-				045DCA611DCA3EB2000E739B /* Assets.xcassets */,
-				045DCA631DCA3EB2000E739B /* LaunchScreen.storyboard */,
-				045DCA661DCA3EB2000E739B /* Info.plist */,
 			);
+			path = MeasureCameraAttitude;
+			sourceTree = "<group>";
+		};
+		045DCA6C1DCA3EE7000E739B /* Other files */ = {
+			isa = PBXGroup;
+			children = (
+				045DCA5A1DCA3EB2000E739B /* AppDelegate.swift */,
+				045DCA661DCA3EB2000E739B /* Info.plist */,
+				045DCA631DCA3EB2000E739B /* LaunchScreen.storyboard */,
+				045DCA611DCA3EB2000E739B /* Assets.xcassets */,
+			);
+			name = "Other files";
 			path = MeasureCameraAttitude;
 			sourceTree = "<group>";
 		};
@@ -302,6 +311,7 @@
 				045DCA6B1DCA3EB2000E739B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
