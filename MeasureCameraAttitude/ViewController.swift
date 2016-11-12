@@ -17,15 +17,20 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
 //    var rotationMatrix: CMRotationMatrix?
 //    var eulerAngles: CMAttitude?
     
+//    @IBOutlet weak var boxView: SCNView!
+
+    @IBOutlet weak var boxView: SCNView!
     var boxNode: SCNNode?
-    @IBOutlet weak var arrowView: SCNView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let sensorQueue = OperationQueue()
+        sensorQueue.name = "SensorData"
+        
         if motionManager.isDeviceMotionAvailable {
             motionManager.deviceMotionUpdateInterval = 1/30.0
-            motionManager.startDeviceMotionUpdates(using: .xArbitraryZVertical, to: OperationQueue.current!, withHandler: { (deviceMotion, error) in
+            motionManager.startDeviceMotionUpdates(using: .xArbitraryZVertical, to: OperationQueue(), withHandler: { (deviceMotion, error) in
                 guard let data = deviceMotion else { return }
                 self.deviceQuaternion = data.attitude.quaternion
 //                self.rotationMatrix = data.attitude.rotationMatrix
@@ -34,9 +39,9 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
         }
         
         let graphicsScene = SCNScene()
-        arrowView.scene = graphicsScene
-        arrowView.backgroundColor = UIColor.gray
-        arrowView.autoenablesDefaultLighting = true
+        boxView.scene = graphicsScene
+        boxView.backgroundColor = UIColor.gray
+        boxView.autoenablesDefaultLighting = true
         
         boxNode = SCNNode()
         if let box = boxNode {
@@ -45,8 +50,8 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
             graphicsScene.rootNode.addChildNode(box)
         }
         
-        arrowView.delegate = self
-        arrowView.isPlaying = true
+        boxView.delegate = self
+        boxView.isPlaying = true
     }
 
     

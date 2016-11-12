@@ -29,7 +29,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
-                        <outlet property="arrowView" destination="CWL-wb-hLU" id="bfc-7q-2LZ"/>
+                        <outlet property="boxView" destination="CWL-wb-hLU" id="mRM-yO-Npn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
