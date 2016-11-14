@@ -16,8 +16,6 @@ class ViewController: UIViewController, SCNSceneRendererDelegate {
     var deviceQuaternion: CMQuaternion?
 //    var rotationMatrix: CMRotationMatrix?
 //    var eulerAngles: CMAttitude?
-    
-//    @IBOutlet weak var boxView: SCNView!
 
     @IBOutlet weak var boxView: SCNView!
     var boxNode: SCNNode?
